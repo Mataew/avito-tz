@@ -1,0 +1,7 @@
+.advertisements-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;
+    margin: auto;
+}

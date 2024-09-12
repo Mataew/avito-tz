@@ -1,0 +1,41 @@
+.advertisement-page {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.advertisement-page__image {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.advertisement-page__editing-button {
+    position: absolute;
+}
+
+.advertisement-page__name {
+    font-size: 30px;
+    color: #00aaff;
+    width: 250px;
+
+    &:hover {
+        color: #ff6163;
+    }
+}
+
+.advertisement-page__price {
+    font-size: 20px;
+    width: 250px;
+}
+
+.advertisement-page__description {
+    margin-top: 10px;
+    width: 250px;
+}

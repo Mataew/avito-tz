@@ -1,0 +1,15 @@
+.advertisement-adder {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+     & > input {
+         margin-bottom: 5px;
+     }
+}
+
+.advertisement-adder__image {
+    width: 208px;
+    height: 208px;
+}
+

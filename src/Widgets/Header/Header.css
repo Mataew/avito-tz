@@ -1,0 +1,8 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    background: #292929;
+    padding: 5px;
+}
