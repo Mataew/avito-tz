@@ -10,7 +10,6 @@ const App = () => {
         <>
             <Routes>
                 <Route path='/' element={<Header />}>
-                    <Route path='/' element={<div>AVTIO TZ</div>}/>
                     <Route path="/advertisements" element={<Advertisements />}/>
                     <Route path="/advertisements/:advertisementId" element={<AdvertisementPage />}/>
                     <Route path="/orders" element={<Orders />}/>

@@ -3,8 +3,8 @@
 }
 
 .advertisement-сard__image {
-    width: 208px;
-    height: 208px;
+    width: 100%;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;

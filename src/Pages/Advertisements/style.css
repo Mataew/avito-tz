@@ -1,7 +1,12 @@
 .advertisements-page {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.advertisements-page__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 70%;
-    margin: auto;
 }

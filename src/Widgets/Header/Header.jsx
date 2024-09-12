@@ -8,7 +8,6 @@ export const Header = () => {
         <>
             <div className='nav'>
                 <LinkButton to='/advertisements'>Мои объявления</LinkButton>
-                <LinkButton to='/'>ДОМОЙ</LinkButton>
                 <LinkButton to='/orders'>Мои заказы</LinkButton>
             </div>
             <Outlet />

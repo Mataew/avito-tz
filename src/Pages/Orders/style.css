@@ -1,0 +1,24 @@
+.orders-page {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.order-card__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+    & > div {
+        background-color: #00aaff;
+        padding: 10px;
+        flex: 1;
+    }
+}
+
+/*.orders__cards {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: flex-start;*/
+/*}*/

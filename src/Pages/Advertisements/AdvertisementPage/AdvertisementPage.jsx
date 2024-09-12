@@ -10,18 +10,22 @@ const AdvertisementPage = () => {
     const [formData, setFormData] = useState({});
     const [isEditing, setIsEditing] = useState(false);
 
+    const fetchAdvertisement = async () => {
+        const advertisement = await getAdvertisementById(advertisementId);
+
+        setAdvertisement(advertisement);
+        setFormData(advertisement);
+        setLoading(false);
+    };
+
     useEffect(() => {
         setLoading(true);
-        const fetchAdvertisement = async () => {
-
-            const advertisement = await getAdvertisementById(advertisementId);
-
-            setAdvertisement(advertisement);
-            setFormData(advertisement);
-            setLoading(false);
-        };
 
         fetchAdvertisement();
+        //
+        return () => {
+            console.log('norm?')
+        }
     }, [advertisementId]);
 
     const onChange = (e) => {
@@ -34,7 +38,7 @@ const AdvertisementPage = () => {
             }
         })
     };
-    console.log(formData)
+
     const handleEditing = async () => {
         setIsEditing(!isEditing)
         if (isEditing) {
@@ -49,7 +53,9 @@ const AdvertisementPage = () => {
 
     return (
         <div className='advertisement-page'>
-            <button className='advertisement-page__editing-button' onClick={() => handleEditing()}>Редактировать</button>
+            <button className='advertisement-page__editing-button' onClick={() => handleEditing()}>
+                {isEditing ? 'Подтвердить изменения' : 'Редактировать'}
+            </button>
             <div className='advertisement-page__image'>
                 {isEditing ? <input onChange={(e) => onChange(e)} value={formData?.imageUrl} name='imageUrl' type="text"/> : <img src={advertisement?.imageUrl} alt={advertisement?.name} />}
             </div>

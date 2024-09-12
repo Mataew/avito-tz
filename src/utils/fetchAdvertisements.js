@@ -1,8 +1,8 @@
-export const getAdvertisements = async () => {
+export const getAdvertisements = async (start = 0, limit = 0, callbackError) => {
     try {
-        let data = await fetch('http://localhost:8000/advertisements');
+        let data = await fetch(`http://localhost:8000/advertisements?_start=${start}&_limit=${limit}`);
         return await data.json()
-    } catch(e) {
+    } catch (e) {
         console.log(e)
     }
 }

@@ -7,7 +7,7 @@ const AdvertisementCard = ({ advertisements }) => {
     const navigate = useNavigate();
 
     const onClick = (id) => {
-        navigate(`/advertisements/${id}`)
+        navigate(`/advertisements/${id}`);
     }
 
     return (
@@ -23,8 +23,8 @@ const AdvertisementCard = ({ advertisements }) => {
             </div>
             <div className='advertisement-сard__name'>{name}</div>
             <div className='advertisement-сard__price'>{price}</div>
-            <div className='advertisement-сard__views'>{views}</div>
-            <div className='advertisement-сard__likes'>{likes}</div>
+            <div className='advertisement-сard__views'>Просмотры: {views}</div>
+            <div className='advertisement-сard__likes'>Добавили в избранное: {likes}</div>
         </div>
     );
 };

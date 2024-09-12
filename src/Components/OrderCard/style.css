@@ -1,0 +1,18 @@
+.order-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background-color: #292929;
+    color: #f0f0f0;
+    align-items: center;
+
+    & > div {
+        padding: 10px;
+        flex: 1;
+
+        & > button {
+            padding: 5px;
+        }
+    }
+}
