@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './style.css';
+import './Orders.css';
 import {getOrders} from "../../utils/fetchOrders";
 import OrderCard from "../../Components/OrderCard/OrderCard";
 import OrdersSort from "../../Components/OrdersSort/OrdersSort";
@@ -8,7 +8,6 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [initialOrders, setInitialOrders] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [sort, setSort] = useState('');
 
 
 

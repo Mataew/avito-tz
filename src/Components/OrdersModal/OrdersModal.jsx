@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './OrdersModal.css';
 import AdvertisementCard from "../AdvertisementCard/AdvertisementCard";
 
 const OrdersModal = ({ showModal, onClose, orderItems }) => {
@@ -9,9 +9,9 @@ const OrdersModal = ({ showModal, onClose, orderItems }) => {
         <div className="orders-modal" onClick={onClose}>
             <div className="orders-modal__content" onClick={(e) => e.stopPropagation()}>
                 <h2>Товары в заказе</h2>
-                <ul>
+                <div className="orders-modal__content__cards">
                     {orderItems.map(order => <AdvertisementCard callbackSuccess={onClose} advertisements={order}/>)}
-                </ul>
+                </div>
                 <button onClick={onClose}>Закрыть</button>
             </div>
         </div>

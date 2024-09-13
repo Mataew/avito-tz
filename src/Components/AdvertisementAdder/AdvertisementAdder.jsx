@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './style.css';
+import './AdvertisementAdder.css';
 import { postAdvertisement } from "../../utils/fetchAdvertisements";
 
 const AdvertisementAdder = () => {
@@ -27,7 +27,7 @@ const AdvertisementAdder = () => {
             <input placeholder='name' className='advertisement-adder__name' onChange={(e) => onChange(e)} type="text" name='name'/>
             <input placeholder='description' className='advertisement-adder__description' onChange={(e) => onChange(e)} type="text" name='description'/>
             <input placeholder='price' className='advertisement-adder__price' onChange={(e) => onChange(e)} type="number" name='price'/>
-            <button onClick={onClick}>Добавлять</button>
+            <button onClick={onClick}>Добавить</button>
         </div>
     );
 };

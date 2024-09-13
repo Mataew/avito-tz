@@ -1,27 +1,27 @@
-export const getAdvertisements = async (start = 0, limit = 0, callbackError) => {
+export const getAdvertisements = async (limit = 0, search = '') => {
     try {
-        let data = await fetch(`http://localhost:8000/advertisements?_start=${start}&_limit=${limit}`);
-        return await data.json()
+        const data = await fetch(`${process.env.BACKEND_API_URL}/advertisements?_limit=${limit}&_page=1`);
+        return await data.json();
     } catch (e) {
-        console.log(e)
+        console.log(e);
     }
-}
+};
 
 export const getAdvertisementById = async (id) => {
     try {
-        let data = await fetch(`http://localhost:8000/advertisements/${id}`);
-        return await data.json()
+        const data = await fetch(`${process.env.BACKEND_API_URL}/advertisements/${id}`);
+        return await data.json();
     } catch(e) {
-        console.log(e)
+        console.log(e);
     }
-}
+};
 
 export const postAdvertisement = async ({name, price, imageUrl, description}) => {
     try {
-        await fetch('http://localhost:8000/advertisements', {
-            method: 'POST',
+        await fetch(`${process.env.BACKEND_API_URL}/advertisements`, {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                "Content-Type": "application/json;charset=utf-8"
             },
             body: JSON.stringify({
                 name,
@@ -31,19 +31,17 @@ export const postAdvertisement = async ({name, price, imageUrl, description}) =>
             })
         });
 
-        console.log('создан')
-
     } catch(e) {
-        console.log(e)
+        console.log(e);
     }
-}
+};
 
 export const patchAdvertisement = async ({id,name, price, imageUrl, description}) => {
     try {
-        await fetch(`http://localhost:8000/advertisements/${id}`, {
-            method: 'PATCH',
+        await fetch(`${process.env.BACKEND_API_URL}/advertisements/${id}`, {
+            method: "PATCH",
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                "Content-Type": "application/json;charset=utf-8"
             },
             body: JSON.stringify({
                 name,
@@ -52,11 +50,8 @@ export const patchAdvertisement = async ({id,name, price, imageUrl, description}
                 description
             })
         });
-
-        console.log('создан')
-
     } catch(e) {
-        console.log(e)
+        console.log(e);
     }
-}
+};
 

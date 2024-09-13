@@ -1,8 +1,8 @@
 import React from 'react';
-import './style.css';
+import './AdvertisementCard.css';
 import {useNavigate} from "react-router-dom";
-const AdvertisementCard = ({ advertisements }) => {
 
+const AdvertisementCard = ({ advertisements }) => {
     const { id, name, price, views, likes, imageUrl } = advertisements;
     const navigate = useNavigate();
 

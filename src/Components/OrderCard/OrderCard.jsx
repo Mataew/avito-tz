@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import './style.css';
+import './OrdersCard.css';
 import OrdersModal from "../OrdersModal/OrdersModal";
-
 const OrderCard = ({order, index}) => {
     const { items, createdAt, finishedAt, status, total } = order;
     const [showModal, setShowModal] = useState(false);
